@@ -1,0 +1,74 @@
+/*reset css 重置样式*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*让宽的设置从边框开始计算: 在非固定像素布局处理内容溢出横向滚动条*/
+	-webkit-box-sizing: border-box; /*移动端的主流浏览器内核 webkit*/
+	-webkit-tap-highlight-color: transparent; /*去掉点击高亮效果*/
+}
+
+body {
+	font-size: 14px;
+	color: #333;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+input[type="search"],
+input[type="text"] {
+	border: none;
+	outline: none;
+	-webkit-appearance: none; /*去除移动端输入框的立体效果*/
+}
+
+
+/*common css 公共样式*/
+.f_left {
+	float: left;
+}
+
+.f_right {
+	float: right;
+}
+
+
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block; /*不想占位置 块级元素*/
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+.ml10 {
+	margin-left: 10px;
+}
+
+.mr10 {
+	margin-right: 10px;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
+
+[class^="icon_"],[class*=" icon_"]{
+	background: url("../images/sprites.png") no-repeat 0 0 / 200px 200px;
+}
